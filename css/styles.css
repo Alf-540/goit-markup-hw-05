@@ -753,7 +753,7 @@ ul {
 }
 
 .modal {
-  position: absolute;
+  position: relative;
   width: 528px;
   min-height: 581px;
   background-color: var(--header-background-color);
