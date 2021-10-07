@@ -20,6 +20,7 @@
   --svg-fill: #afb1b8;
   --occupation-background: rgba(47, 48, 58, 0.8);
   --card-overlay: rgba(33, 150, 243, 0.9);
+  --modal-backdrop: rgba(0, 0, 0, 0.2);
 }
 body {
   font-family: roboto, sans-serif;
@@ -740,4 +741,36 @@ ul {
 
   color: var(--hero-text-color);
   background-color: var(--card-overlay);
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--modal-backdrop);
+}
+
+.modal {
+  position: absolute;
+  width: 528px;
+  min-height: 581px;
+  background-color: var(--header-background-color);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 4px;
+}
+
+.modal-btn {
+  position: absolute;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  top: 0;
+  right: 0;
+}
+
+.close-ico {
+  fill: var(--logo-color);
 }

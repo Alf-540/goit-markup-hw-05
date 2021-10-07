@@ -331,7 +331,16 @@
         </div>
     </footer>
     <!-- модальное окно -->
-    <script src="./js/modal.js"></script>
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <button class="modal-btn" data-modal-close>
+                <svg class="close-ico">
+                    <use src="/images/icons.svg#close"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+    <script href="./js/modal.js"></script>
 </body>
 
 </html>
