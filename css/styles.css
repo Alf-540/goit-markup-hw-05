@@ -19,6 +19,7 @@
   --border-cards-color: #eeeeee;
   --svg-fill: #afb1b8;
   --occupation-background: rgba(47, 48, 58, 0.8);
+  --card-overlay: rgba(33, 150, 243, 0.9);
 }
 body {
   font-family: roboto, sans-serif;
@@ -307,7 +308,7 @@ ul {
   margin: 0;
   border: 0;
 }
-.occupation-item > .container {
+.occupation-item > .thumb {
   position: relative;
   width: 100%;
   height: 294px;
@@ -325,7 +326,7 @@ ul {
 
   position: absolute;
   bottom: 0;
-  width: 370px;
+  width: 100%;
   height: 70px;
 
   font-style: normal;
@@ -651,6 +652,7 @@ ul {
 .portfolio-list-item > .portfolio-button {
   padding: 6px 22px;
 }
+
 /* наши работы */
 .works {
   display: flex;
@@ -705,4 +707,37 @@ ul {
   line-height: calc(30 / 16);
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
+}
+
+.works-list-item .thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.works-list-item:hover .works-card-description {
+  transform: translateY(0);
+}
+
+.works-card-description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 64px 24px;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  transform: translateY(100%);
+  transition: transform 300ms linear;
+
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: calc(28 / 18);
+
+  letter-spacing: 0.03em;
+
+  color: var(--hero-text-color);
+  background-color: var(--card-overlay);
 }
